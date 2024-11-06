@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "DM Sans 14pt";
+    src: url('DMSans-VariableFont_opsz,wght.ttf') format('TrueType'); font-family: "DM Sans 14pt SemiBold", sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+#l {
+    background-color:rgb(148, 104, 51);
+    float: left ;
+    width: 275px ;
+    height: 500px;
+}
+
+#r {
+    background-color:rgb(148, 104, 51);
+    float: right;
+    width: 275px ;
+    height: 500px;
+}
+
+#menyyriba {
+    margin-top: 10px;
+}
+
+
+
+
+
+#pealeht {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "DM Sans 14pt";
+    font-size: 50px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#ott {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "DM Sans 14pt";
+    font-size: 40px;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+#henri {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "DM Sans 14pt";
+    font-size: 40px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+#nils {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "DM Sans 14pt";
+    font-size: 40px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+}
+
