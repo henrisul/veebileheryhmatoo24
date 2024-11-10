@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "DM Sans 14pt";
+    src: url('DMSans-VariableFont_opsz,wght.ttf') format('TrueType'); font-family: "DM Sans 14pt SemiBold", sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+#l {
+    background-color:rgb(148, 104, 51);
+    float: left ;
+    width: 150px ;
+    height: 500px;
+}
+
+#r {
+    background-color:rgb(148, 104, 51);
+    float: right;
+    width: 150px ;
+    height: 500px;
+}
