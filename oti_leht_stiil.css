@@ -1,6 +1,6 @@
 @font-face {
     font-family: "DM Sans 14pt";
-    src: url('DMSans-VariableFont_opsz,wght.ttf') format('TrueType'); font-family: "DM Sans 14pt SemiBold", sans-serif;
+    src: url("DMSans-VariableFont_opsz,wght.ttf") format("TrueType"); 
 }
 
 body {
@@ -71,5 +71,28 @@ body {
 
 .container {
     display: flex;
+}
+
+
+#tekstikast{
+    margin-top: 150px;
+    margin-bottom: 80px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 80px;
+    background-color: #f9f8f7;
+    height: 300px;
+    
+    
+}
+
+#sisu1 {
+    font-family: "DM Sans 14pt";
+    font-size: 40px;
+}
+
+#tekst1 {
+    font-family: "DM Sans 14pt";
+    font-size: 15px;
 }
 
