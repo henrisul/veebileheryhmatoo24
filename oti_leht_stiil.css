@@ -115,25 +115,25 @@ a:visited {
 
 /* Need neli ↓ võiks ka kuidagi ühtseks teha kui vähegi võimalik */
 #tekst1p{
-    margin-left: 100px;
+    margin-left: 5.5vw;
     font-size: 35px;
 }
 
 #tekst1{
-    margin-left: 100px;
+    margin-left: 5.5vw;
     font-size: 25px;
-    margin-bottom: 115px;
+    margin-bottom: 12vh;
 }
 
 #tekst2p{
-    margin-right: 77px;
+    margin-right: 22.2vw;
     font-size: 35px;
 }
 
 #tekst2{
-    margin-right: 77px;
+    margin-right: 4vw;
     font-size: 25px;
-    margin-bottom: 155px;
+    margin-bottom: 16.5vh;
 }
 
 .fadeInEl {
