@@ -1,22 +1,189 @@
-@font-face {
-    font-family: "DM Sans 14pt";
-    src: url('DMSans-VariableFont_opsz,wght.ttf') format('TrueType'); font-family: "DM Sans 14pt SemiBold", sans-serif;
+@font-face{
+    font-family:"Bahnschrift";
+    src: url(fonts/bahnschrift.ttf)
+}
+
+/* Kasutatud ainult ülemiste nuppude jaoks */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -100%)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Kasutatud ainult esimese "infokasti" jaoks */
+@keyframes fadeInFromBelow {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 100%)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Kasutatud alates teisest reast "infokastide" jaoks */
+@keyframes fadeInFromBelow_LowOpacity {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 100%)
+    }
+    100% {
+        opacity: 0.05;
+    }
 }
 
 body {
-    background-color: antiquewhite;
+    font-family: "Bahnschrift";
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 15%;
+    margin: 0;
+    background-image:linear-gradient(to right, #2980b9, #2c3e50);
+    color: azure;
 }
 
-#l {
-    background-color:rgb(148, 104, 51);
-    float: left ;
-    width: 150px ;
-    height: 500px;
+.flex-container {
+    display: flex;
 }
 
-#r {
-    background-color:rgb(148, 104, 51);
-    float: right;
-    width: 150px ;
-    height: 500px;
+.menuButton {
+    font-size: 1.5vw;
+    margin: auto;
+    text-align: center;
+    width: 20%;
 }
+
+a {
+    color: azure;
+    text-decoration: none;
+    transition: 100ms;
+    padding:10px;
+    border:5px azure solid;
+    border-radius:15px;
+}
+
+a.menuButton:hover {
+    color:rgb(146, 188, 255);
+    border: 5px rgb(146, 188, 255) solid;
+    transform: scale(0.95);
+}
+
+a:visited {
+    color: azure;
+}
+
+.infoBox {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    background-image: linear-gradient(to right, #28475c, #182431);
+    border:5px azure solid;
+    border-radius:5px;
+}
+
+#firstInfoBox {
+    animation: fadeInFromBelow ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 0.3s;
+    transition: 0.3s;
+}
+
+.innerInfoBox {
+    flex-direction: column-reverse;
+    width: 50%;
+    align-items: center;
+}
+
+.image {
+    margin-top: 75px;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 50px;
+    border-radius:5px;
+    object-fit: cover;
+    border: 3px azure solid;
+    
+}
+
+.image3 {
+    margin-top: 50px;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 130px;
+    border-radius:5px;
+    object-fit: cover;
+    border: 3px azure solid;
+    
+}
+
+/* Need neli ↓ võiks ka kuidagi ühtseks teha kui vähegi võimalik */
+.tekst1p{
+    margin-left: 3.0vw;
+    font-size: 40px;
+}
+
+.tekst1{
+    margin-left: 5.0vw;
+    font-size: 25px;
+    margin-bottom: 15vh;
+}
+
+.tekst2p{
+    margin-right: 10vw;
+    font-size: 40px;
+}
+
+.tekst2{
+    margin-right: 5vw;
+    font-size: 25px;
+    margin-bottom: 15vh;
+}
+
+.tekst3p{
+    margin-left: -12vw;
+    font-size: 40px;
+}
+
+.tekst3{
+    margin-left: 5vw;
+    font-size: 25px;
+    margin-bottom: 15vh;
+}
+
+
+.fadeInEl {
+    transform: translateY(50px);
+    transition: 0.3s;
+    opacity: 0.05;
+
+    animation: fadeInFromBelow_LowOpacity ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 0.3s;
+}
+
+.inViewEl {
+    opacity: 1;
+    transform: translateY(0px) scale(1.02);
+}
+
+.inViewElNoScale {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.aboveViewEl {
+    transform: translateY(-50px);
+}
+
+.buttonContainer {
+    animation: fadeIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 0.3s;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
