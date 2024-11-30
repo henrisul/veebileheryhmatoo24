@@ -9,13 +9,13 @@ firstInfoBox.classList.add("inViewEl");
 
 // delay script so it doesn't interfere with initial animations set in css
 setTimeout(function() {
-    window.addEventListener('scroll', fadeIn );
+    window.addEventListener('scroll', fadeIn);
     fadeIn(); 
 }, 1300)
 
 function fadeIn() {
     // the button container requires different logic so it is dealt with separately
-    var buttonContainer_distance = buttonContainer.getBoundingClientRect().bottom - window.innerHeight * 0.1;
+    var buttonContainer_distance = buttonContainer.getBoundingClientRect().bottom - window.innerHeight * 0.05;
     if (buttonContainer_distance > 0) {
         buttonContainer.classList.remove("aboveViewEl");
         buttonContainer.classList.add("inViewElNoScale");
