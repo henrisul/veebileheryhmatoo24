@@ -1,21 +1,46 @@
-// Leiame kõik elemendid, millel on fadeInEl klass
 let elements = document.querySelectorAll(".fadeInEl");
+let buttonContainer = document.querySelector(".buttonContainer");
+let firstInfoBox = document.querySelector("#firstInfoBox")
 
-// Paus on selleks, et skript hakkaks alles siis tööle, kui css-is määratud animatsioonid on ära mängitud
-// Muidu hakkavad div-id ringi hüppama kui kasutaja alla kerib enne, kui need algsed animatsioonid on läbi
+// adding inViewEl class beforehand because these elements will always be in view when first opening the page
+buttonContainer.classList.add("inViewElNoScale");
+firstInfoBox.classList.add("inViewEl");
+
+
+// delay script so it doesn't interfere with initial animations set in css
 setTimeout(function() {
-    window.addEventListener('scroll', fadeIn ); // Funktsioon käivitatakse iga kord, kui lehel üles-alla keritakse
+    window.addEventListener('scroll', fadeIn );
     fadeIn(); 
 }, 1300)
 
 function fadeIn() {
+    // the button container requires different logic so it is dealt with separately
+    var buttonContainer_distance = buttonContainer.getBoundingClientRect().bottom - window.innerHeight * 0.1;
+    if (buttonContainer_distance > 0) {
+        buttonContainer.classList.remove("aboveViewEl");
+        buttonContainer.classList.add("inViewElNoScale");
+    } else {
+        buttonContainer.classList.remove("inViewElNoScale");
+        buttonContainer.classList.add("aboveViewEl");
+    }
+
+    // check every element's position and fade in/out accordingly
     for (var i = 0; i < elements.length; i++) {
-        var element = elements[i] // Võtame ühe elemendi
-        var distance = element.getBoundingClientRect().top - window.innerHeight / 1.5; // Kontrollime, kus element ekraanil on
-        if (distance < 0) { // Kui on meile sobival kõrgusel, siis laseme sellel elemendil sisse fadeda
-            element.classList.add("inViewEl");
-        } else {
-            element.classList.remove("inViewEl") // Kui enam ei ole, siis element peidetakse
+        var element = elements[i];
+        var top_distance = element.getBoundingClientRect().top - window.innerHeight * 0.7 + 50;
+        var bottom_distance = element.getBoundingClientRect().bottom - window.innerHeight * 0.3 - 50;
+        if (element != buttonContainer) {
+            if (top_distance < 0) {
+                if (bottom_distance > 0) {
+                    element.classList.remove("aboveViewEl");
+                    element.classList.add("inViewEl");
+                } else {
+                    element.classList.remove("inViewEl");
+                    element.classList.add("aboveViewEl");
+                }
+            } else {
+                element.classList.remove("inViewEl");
+            }
         }
     }
 }
