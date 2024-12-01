@@ -42,7 +42,7 @@ body {
     padding-right: 20vw;
     padding-bottom: 15%;
     margin: 0;
-    background-image:linear-gradient(to right, #2980b9, #2c3e50);
+    background-image:linear-gradient(to right, #afd115, #83850e);
     color: azure;
 }
 
@@ -79,7 +79,7 @@ a:visited {
 .infoBox {
     margin-top: 15vh;
     margin-bottom: 15vh;
-    background-image: linear-gradient(to right, #28475c, #182431);
+    background-image: linear-gradient(to right, #616912, #76810d);
     border:5px azure solid;
     border-radius:5px;
 }
@@ -151,7 +151,7 @@ a:visited {
 .tekst3{
     margin-left: 5vw;
     font-size: 25px;
-    margin-bottom: 15vh;
+    margin-bottom: 12.5vh;
 }
 
 
@@ -187,3 +187,4 @@ a:visited {
     animation-delay: 0.3s;
     padding-bottom: 5vh;
     padding-top: 5vh;
+}

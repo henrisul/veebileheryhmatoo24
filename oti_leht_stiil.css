@@ -131,6 +131,28 @@ a:visited {
     margin-bottom: 16.5vh;
 }
 
+.tekst3p{
+    margin-left: -10.5vw;
+    font-size: 35px;
+}
+
+.tekst3{
+    margin-left: 5.5vw;
+    font-size: 25px;
+    margin-bottom: 3.5vh;
+}
+
+.tekst4p{
+    margin-right: 24.5vw;
+    font-size: 35px;
+}
+
+.tekst4{
+    margin-right: 4vw;
+    font-size: 25px;
+    margin-bottom: 10vh;
+}
+
 .fadeInEl {
     transform: translateY(50px);
     transition: 0.3s;
