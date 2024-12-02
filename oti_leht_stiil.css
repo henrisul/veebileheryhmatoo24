@@ -191,14 +191,6 @@ a:visited {
     padding-top: 5vh;
 }
 
-@media screen and (max-width: 1200px) {
-    .image {
-        width: 25vw;
-        height: 35vh;
-        margin-bottom: auto;
-    }
-}
-
 @media screen and (max-width: 1500px) {
     .tekst2{
         margin-bottom: 4vh;
@@ -225,6 +217,12 @@ a:visited {
     .tekst4p{
         margin-right: 21vw;
         margin-top: 5vw;
+    }
+
+    .image {
+        width: 25vw;
+        height: 35vh;
+        margin-bottom: auto;
     }
 
 }
