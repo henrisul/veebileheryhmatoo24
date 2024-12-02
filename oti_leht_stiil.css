@@ -100,8 +100,8 @@ a:visited {
 
 .image {
     margin-top: 75px;
-    width: 400px;
-    height: 400px;
+    width: calc(14vw + 14vh);
+    height: calc(14vw + 14vh);
     margin-bottom: -25px;
     border-radius:5px;
     object-fit: cover;
@@ -110,6 +110,7 @@ a:visited {
 
 /* Need neli ↓ võiks ka kuidagi ühtseks teha kui vähegi võimalik */
 .tekst1p{
+    margin-top: 10vh;
     margin-left: 5.5vw;
     font-size: 35px;
 }
@@ -121,6 +122,7 @@ a:visited {
 }
 
 .tekst2p{
+    margin-top: 10vh;
     margin-right: 22.5vw;
     font-size: 35px;
 }
